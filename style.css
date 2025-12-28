@@ -28,8 +28,10 @@ p {
   font-size: 18px;
 }
 .container {
-  max-width: 350px;
-  margin: 100 auto;/* 讓它在畫面中間 */
+  width: 90%;            /* 在手機上佔據 90% 的寬度，不會貼死邊緣 */
+  max-width: 400px;      /* 在大螢幕上最高只會到 400px，不會變太胖 */
+  margin: 50px auto;     /* margin (外邊距) : 上下 50px，auto 代表左右自動置中 */
+  /* ... 其他原本的設定保持不變 ... */
   background: rgb(166, 179, 50);
   padding: 40px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 1);/*增加陰影感 */
@@ -79,4 +81,8 @@ button:hover {
 button:disabled {
     opacity:0.6;
     cursor: not-allowed
+}
+input, button {
+  min-height: 48px;      /* 這是 Google 建議的最小觸控高度，避免手指太粗點不到 */
+  border-radius: 25px;   /* 讓輸入框跟按鈕變圓潤，更有現代 App 的感覺 */
 }
