@@ -1,15 +1,15 @@
 /* 讓背景變換顏色的小魔法 */
 body {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(87deg, gold, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
-  animation: gradient 3s ease infinite;
+  animation: gradient 11s ease infinite;
   height: 100vh;
 }
 
 @keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% { background-position: 21% 55%; }
+  50% { background-position: 60% 33%; }
+  100% { background-position: 11% 60%; }
 }
 
 h1 {
@@ -85,4 +85,18 @@ button:disabled {
 input, button {
   min-height: 48px;      /* 這是 Google 建議的最小觸控高度，避免手指太粗點不到 */
   border-radius: 25px;   /* 讓輸入框跟按鈕變圓潤，更有現代 App 的感覺 */
+}
+.button-group {
+    display: flex;         /* 啟用彈性佈局 */
+    gap: 10px;            /* 按鈕之間的間距 */
+    margin-top: 20px;     /* 與上方輸入框的距離 */
+}
+
+.button-group button {
+    flex: 1;              /* 讓兩個按鈕平分寬度 */
+}
+
+#clearBtn {
+    background-color: #95a5a6; /* 給清除按鈕一個不同的灰色，區分功能 */
+    color: white;
 }
