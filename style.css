@@ -1,0 +1,82 @@
+/* 讓背景變換顏色的小魔法 */
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  text-align: center;
+  color: rgb(121, 47, 28);
+  margin-bottom: 11px;
+}
+/*給按鈕加一個滑鼠一過去的特效*/
+  button:hover {
+    background_color: #34495e;
+    transition: 0.3s;
+  }
+
+p {
+  color: #555;
+  font-size: 18px;
+}
+.container {
+  max-width: 350px;
+  margin: 100 auto;/* 讓它在畫面中間 */
+  background: rgb(166, 179, 50);
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 1);/*增加陰影感 */
+  border-radius: 8px;/* 讓角落圓圓的 */
+  font-family: Arial, sans-serif;
+}
+.field {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+}
+
+label {
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #555;
+}
+
+input {
+  padding: 1px;
+  font-size: 11px;
+}
+
+button:hover {
+  opacity:0.8;/*浮動按鈕*/
+  padding: 15px;
+  font-size: 16px;
+  background-color: #452c50;
+  color: rgb(25, 26, 121);
+  border: none;
+  cursor: pointer;
+  
+}
+
+.message {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.message.error {
+  color: red;
+}
+
+.message.success {
+  color: green;
+}
+button:disabled {
+    opacity:0.6;
+    cursor: not-allowed
+}
