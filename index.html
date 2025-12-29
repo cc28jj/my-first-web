@@ -11,19 +11,21 @@
 
     <div class="field">
       <label>帳號</label>
-      <input type="text" />
+      <input type="text" placeholder="請輸入帳號" />
     </div>
 
     <div class="field">
       <label>密碼</label>
-      <input type="password" />
+    <div class="password-input-wrapper"> 
+      <input type="password" id="passwordInput" /> 
+      <span class="toggle-password" id="togglePassword">👁️</span> 
     </div>
-
 </div>
 
 <div class="button-group">
     <button id="loginBtn">登入</button>
     <button id="clearBtn">清除記憶</button>
-<p id="message" class="message"></p>
 </div>
+
+<p id="message" class="message"></p>
 </body>

@@ -4,7 +4,6 @@ body {
   background-size: 400% 400%;
   animation: gradient 11s ease infinite;
   height: 100vh;
-}
 
 @keyframes gradient {
   0% { background-position: 21% 55%; }
@@ -100,3 +99,22 @@ input, button {
     background-color: #95a5a6; /* 給清除按鈕一個不同的灰色，區分功能 */
     color: white;
 }
+.password-input-wrapper {
+    position: relative; /* 讓內部元素可以「相對定位」 */
+    width: 100%;        /* 讓 wrapper 佔滿父容器寬度 */
+    display: flex;      /* 啟用 Flexbox */
+}
+
+#passwordInput {
+    flex: 1;            /* 讓輸入框佔據所有可用空間 */
+    padding-right: 40px; /* 預留空間給眼睛圖示 */
+}
+
+.toggle-password {
+    position: absolute; /* 相對於父元素 (.password-input-wrapper) 定位 */
+    right: 10px;        /* 離右邊 10px */
+    top: 50%;           /* 從上方開始 50% */
+    transform: translateY(-50%); /* 向上移動自身高度的一半，讓它垂直居中 */
+    cursor: pointer;    /* 鼠標移上去會變成小手，表示可以點擊 */
+    font-size: 20px;    /* 讓眼睛大一點，好點擊 */
+}}
