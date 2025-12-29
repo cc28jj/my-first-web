@@ -4,7 +4,7 @@ body {
   background-size: 400% 400%;
   animation: gradient 11s ease infinite;
   height: 100vh;
-
+}
 @keyframes gradient {
   0% { background-position: 21% 55%; }
   50% { background-position: 60% 33%; }
@@ -16,11 +16,6 @@ h1 {
   color: rgb(121, 47, 28);
   margin-bottom: 11px;
 }
-/*給按鈕加一個滑鼠一過去的特效*/
-  button:hover {
-    background_color: #34495e;
-    transition: 0.3s;
-  }
 
 p {
   color: #555;
@@ -55,14 +50,9 @@ input {
 }
 
 button:hover {
-  opacity:0.8;/*浮動按鈕*/
-  padding: 15px;
-  font-size: 16px;
+  opacity: 0.85;
   background-color: #452c50;
-  color: rgb(25, 26, 121);
-  border: none;
-  cursor: pointer;
-  
+  transition: 0.3s;
 }
 
 .message {
@@ -100,21 +90,18 @@ input, button {
     color: white;
 }
 .password-input-wrapper {
-    position: relative; /* 讓內部元素可以「相對定位」 */
-    width: 100%;        /* 讓 wrapper 佔滿父容器寬度 */
-    display: flex;      /* 啟用 Flexbox */
+    position: relative; /* 這行讓眼睛能以這個盒子為基準定位 */
+    display: flex;
+    align-items: center;
 }
-
 #passwordInput {
     flex: 1;            /* 讓輸入框佔據所有可用空間 */
     padding-right: 40px; /* 預留空間給眼睛圖示 */
 }
 
 .toggle-password {
-    position: absolute; /* 相對於父元素 (.password-input-wrapper) 定位 */
-    right: 10px;        /* 離右邊 10px */
-    top: 50%;           /* 從上方開始 50% */
-    transform: translateY(-50%); /* 向上移動自身高度的一半，讓它垂直居中 */
-    cursor: pointer;    /* 鼠標移上去會變成小手，表示可以點擊 */
-    font-size: 20px;    /* 讓眼睛大一點，好點擊 */
-}}
+    position: absolute; /* 這行讓眼睛能「飛」到輸入框上面 */
+    right: 15px;       /* 靠右邊一點 */
+    cursor: pointer;
+    z-index: 10;       /* 確保它在最上層，點得到 */
+}
